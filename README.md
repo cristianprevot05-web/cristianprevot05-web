@@ -1,10 +1,11 @@
 <!-- Os SVGs de assets/ são gerados por tools/gerar.mjs (npm run assets) -->
-<img width="100%" src="assets/topo.svg" alt="Cristian Prevot. Antes da ligação do cliente. Monitoro a rede de um provedor e escrevo as ferramentas que faltam. Rio de Janeiro." />
+<a href="https://cristianprevot05-web.github.io"><img width="100%" src="assets/topo.svg" alt="Cristian Prevot. Antes da ligação do cliente. Monitoro a rede de um provedor e escrevo as ferramentas que faltam. Rio de Janeiro." /></a>
 
 Trabalho com **monitoramento de redes num provedor de internet**. Passo o dia de olho em OLT, CTO, link e servidor,
 e gosto de transformar esse mar de alertas num painel que qualquer pessoa do NOC entende de primeira.
 
 Quando a ferramenta certa não existe, eu escrevo. Três delas estão abertas aqui embaixo.
+No site, o globo do topo gira com o mouse: **[cristianprevot05-web.github.io](https://cristianprevot05-web.github.io)**
 
 ## Central de Comunicados
 
