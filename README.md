@@ -1,11 +1,21 @@
 <!-- Os SVGs de assets/ são gerados por tools/gerar.mjs (npm run assets) -->
 <a href="https://cristianprevot05-web.github.io"><img width="100%" src="assets/topo.svg" alt="Cristian Prevot. Antes da ligação do cliente. Monitoro a rede de um provedor e escrevo as ferramentas que faltam. Rio de Janeiro." /></a>
 
+<img align="right" width="280" src="assets/retrato.svg" alt="Retrato de Cristian Prevot." />
+
 Trabalho com **monitoramento de redes num provedor de internet**. Passo o dia de olho em OLT, CTO, link e servidor,
 e gosto de transformar esse mar de alertas num painel que qualquer pessoa do NOC entende de primeira.
 
 Quando a ferramenta certa não existe, eu escrevo. Três delas estão abertas aqui embaixo.
-No site, o globo do topo gira com o mouse: **[cristianprevot05-web.github.io](https://cristianprevot05-web.github.io)**
+
+O meu portfólio fica na **[Agência Axle](https://agenciaaxle.com/)**, a agência que tenho com a minha esposa.
+No [meu site](https://cristianprevot05-web.github.io), o globo do topo gira com o mouse.
+
+<a href="https://agenciaaxle.com/"><img src="https://img.shields.io/badge/portf%C3%B3lio-agenciaaxle.com-f2c230?style=flat-square&labelColor=151412" alt="Portfólio: agenciaaxle.com" /></a>
+<a href="https://cristianprevot05-web.github.io"><img src="https://img.shields.io/badge/site-cristianprevot05--web.github.io-f2c230?style=flat-square&labelColor=151412" alt="Site: cristianprevot05-web.github.io" /></a>
+<img src="https://komarev.com/ghpvc/?username=cristianprevot05-web&label=visitas&color=151412&style=flat-square" alt="Visitas ao perfil" />
+
+<br clear="right" />
 
 ## Central de Comunicados
 
@@ -50,6 +60,8 @@ com temperatura 0, e as senhas de equipamento vêm de uma tabela fixa, para o mo
 <img width="100%" src="assets/ferramentas.svg" alt="Ferramentas: Python, JavaScript, TypeScript, React, Next.js, Tailwind, Three.js, Node.js, Supabase, PostgreSQL, Zabbix, Grafana, PHP, Streamlit, Vercel e Git." />
 
 ## Atividade
+
+<img width="100%" src="https://raw.githubusercontent.com/cristianprevot05-web/cristianprevot05-web/metricas/metricas.svg" alt="Contribuições do último ano num calendário 3D, com a sequência atual, o melhor dia, os dias da semana e as linguagens. Atualizado todo dia." />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cristianprevot05-web/cristianprevot05-web/output/snake-dark.svg" />
