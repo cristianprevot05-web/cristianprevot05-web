@@ -1,54 +1,71 @@
 <!-- Os SVGs de assets/ são gerados por tools/gerar.mjs (npm run assets) -->
-<img width="100%" src="assets/topo.svg" alt="Cristian Prevot. Monitoramento de redes, desenvolvimento web e IA. Um globo de pontos gira com conexões entre pontos de presença, ao lado de um gráfico de tráfego de 24 horas com pico às 21h." />
+<img width="100%" src="assets/topo.svg" alt="Cristian Prevot. Antes da ligação do cliente. Monitoro a rede de um provedor e escrevo as ferramentas que faltam. Rio de Janeiro." />
 
-<br><br>
+Trabalho com **monitoramento de redes num provedor de internet**. Passo o dia de olho em OLT, CTO, link e servidor,
+e gosto de transformar esse mar de alertas num painel que qualquer pessoa do NOC entende de primeira.
 
-<img width="100%" src="assets/titulo-sobre-mim.svg" alt="Sobre mim" />
+Quando a ferramenta certa não existe, eu escrevo. Três delas estão abertas aqui embaixo, e uma você pode usar agora mesmo.
 
-Trabalho com **monitoramento de redes em provedor de internet**. Meu dia é olhar OLT, CTO, link e servidor,
-e o que eu mais gosto é transformar esse mar de alertas num painel que qualquer pessoa do NOC entende de primeira.
+## Central NOC
 
-Quando a ferramenta certa não existe, eu escrevo: painel de incidentes, central de comunicados, integrações
-com o ERP, sites e um agente de IA que responde com base nos manuais da empresa.
+<a href="https://cristianprevot05-web.github.io/central-noc/Monitoramento.Netflex/"><img width="100%" src="assets/central-noc.jpg" alt="Central NOC na demonstração: 10 clientes sem internet em 2 lugares, com a CTO-07 fora do ar e a CTO-12 em alerta." /></a>
 
-- 📡 **No NOC:** Zabbix, Grafana, NetBox e LibreNMS, com painel rodando até na TV da sala
-- 🧩 **Integrações:** ERP IXC, Supabase e APIs que precisam conversar entre si
-- 🤖 **IA com pé no chão:** RAG rodando local no LM Studio, com temperatura 0 para não inventar resposta
-- 🌐 **Web:** sites e painéis em JavaScript, TypeScript, React e Next.js
-- ✨ **Detalhe que importa:** animação, 3D com Three.js e interface que dá vontade de usar
+Incidentes agrupados por causa e por clientes afetados, com dados do Zabbix, NetBox, LibreNMS e IXC.
+Roda até na TV da sala do NOC, e 58 testes conferem cada mudança.
 
+**[Abrir a demo](https://cristianprevot05-web.github.io/central-noc/Monitoramento.Netflex/)** com dados fictícios, ou [ler o código](https://github.com/cristianprevot05-web/central-noc).
+
+<details>
+<summary>Como funciona por dentro</summary>
 <br>
 
-<img width="100%" src="assets/titulo-projetos.svg" alt="Projetos em destaque" />
+- Uma API em Node, sem dependências, fala com o Zabbix e com o IXC. Os tokens ficam só no servidor, nunca no navegador.
+- No Zabbix ela só lê e reconhece alarme; no IXC só lista, e só as tabelas que o painel usa.
+- Os logins do IXC viram clientes on-line, sem internet ou bloqueados por atraso, e as quedas são agrupadas por CTO ou por OLT.
+- A topologia vem do NetBox e os vizinhos LLDP, do LibreNMS.
 
-<p align="center">
-  <img width="49%" src="assets/card-central-noc.svg" alt="Central NOC do provedor: incidentes agrupados por causa e por clientes afetados, com dados do Zabbix, NetBox, LibreNMS e IXC." />
-  <img width="49%" src="assets/card-central-comunicados.svg" alt="Central de Comunicados: monta o aviso de rompimento ou manutenção no modelo oficial, passa por aprovação e publica no Instagram." />
-</p>
-<p align="center">
-  <img width="49%" src="assets/card-agente-ia.svg" alt="Agente de IA para o suporte: triagem de ordens de serviço do ERP IXC e busca nos manuais, rodando local." />
-  <a href="https://github.com/cristianprevot05-web/Monitoramento-de-Redes"><img width="49%" src="assets/card-monitoramento.svg" alt="Monitoramento de OLTs: painel no Grafana com dados do Zabbix e alerta de OS duplicada de reparo de CTO." /></a>
-</p>
+</details>
 
-<p align="center"><sub>🔒 A Central NOC, a Central de Comunicados e o Agente de IA são ferramentas internas, por isso o código é privado. Mostro funcionando numa conversa.</sub></p>
+## Central de Comunicados
 
+<a href="https://github.com/cristianprevot05-web/central-de-comunicados"><img width="100%" src="assets/central-de-comunicados.jpg" alt="Tela inicial da Central de Comunicados: 118 clientes sem internet, status da rede nos últimos 30 dias e o resumo das quedas." /></a>
+
+Monta o aviso de rompimento, instabilidade ou manutenção no modelo oficial, passa por aprovação e publica
+no Instagram do provedor, na hora ou agendado. Quando a rede volta, um botão monta o “Normalizado” com as mesmas regiões.
+
+[Ler o código](https://github.com/cristianprevot05-web/central-de-comunicados)
+
+<details>
+<summary>O que mais ela faz</summary>
 <br>
 
-<img width="100%" src="assets/titulo-stack.svg" alt="Stack" />
+- Story com link: na hora marcada chega um aviso no celular, com o link já copiado para a figurinha.
+- Cada pessoa tem o próprio login, e o administrador escolhe quais ferramentas cada uma usa.
+- Toda ação fica num registro com nome, hora, aparelho e IP que ninguém apaga, nem o administrador.
+- Roda nos planos gratuitos do Supabase, com a API em PHP na hospedagem.
 
-<img width="100%" src="assets/stack.svg" alt="Ferramentas do dia a dia: Python, JavaScript, TypeScript, React, Next.js, Tailwind, Three.js, Node.js, Supabase, PostgreSQL, Zabbix, Grafana, HTML, CSS, Vercel e Git." />
+</details>
 
-<br><br>
+## Sofia, agente de IA do suporte
 
-<img width="100%" src="assets/titulo-atividade.svg" alt="Atividade" />
+Faz a triagem das ordens de serviço do IXC e acha a resposta nos manuais da empresa. Roda local no LM Studio
+com temperatura 0, e as senhas de equipamento vêm de uma tabela fixa, para o modelo nunca inventar uma.
+
+[Ler o código](https://github.com/cristianprevot05-web/agente-de-ia)
+
+## Monitoramento de OLTs
+
+Painel no Grafana com os dados do Zabbix para as OLTs do provedor, mais um alerta de OS duplicada de reparo de CTO vinda do IXC.
+
+[Ler o código](https://github.com/cristianprevot05-web/Monitoramento-de-Redes)
+
+## Ferramentas
+
+<img width="100%" src="assets/ferramentas.svg" alt="Ferramentas: Python, JavaScript, TypeScript, React, Next.js, Tailwind, Three.js, Node.js, Supabase, PostgreSQL, Zabbix, Grafana, PHP, Streamlit, Vercel e Git." />
+
+## Atividade
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cristianprevot05-web/cristianprevot05-web/output/snake-dark.svg" />
   <img width="100%" alt="Cobrinha comendo o gráfico de contribuições" src="https://raw.githubusercontent.com/cristianprevot05-web/cristianprevot05-web/output/snake-light.svg" />
 </picture>
-
-<br><br>
-
-<p align="center"><i>"Alerta bom é o que chega antes da ligação do cliente."</i></p>
-
-<img width="100%" src="assets/rodape.svg" alt="" />
