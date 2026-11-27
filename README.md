@@ -4,27 +4,7 @@
 Trabalho com **monitoramento de redes num provedor de internet**. Passo o dia de olho em OLT, CTO, link e servidor,
 e gosto de transformar esse mar de alertas num painel que qualquer pessoa do NOC entende de primeira.
 
-Quando a ferramenta certa não existe, eu escrevo. Três delas estão abertas aqui embaixo, e uma você pode usar agora mesmo.
-
-## Central NOC
-
-<a href="https://cristianprevot05-web.github.io/central-noc/Monitoramento.Netflex/"><img width="100%" src="assets/central-noc.jpg" alt="Central NOC na demonstração: 10 clientes sem internet em 2 lugares, com a CTO-07 fora do ar e a CTO-12 em alerta." /></a>
-
-Incidentes agrupados por causa e por clientes afetados, com dados do Zabbix, NetBox, LibreNMS e IXC.
-Roda até na TV da sala do NOC, e 58 testes conferem cada mudança.
-
-**[Abrir a demo](https://cristianprevot05-web.github.io/central-noc/Monitoramento.Netflex/)** com dados fictícios, ou [ler o código](https://github.com/cristianprevot05-web/central-noc).
-
-<details>
-<summary>Como funciona por dentro</summary>
-<br>
-
-- Uma API em Node, sem dependências, fala com o Zabbix e com o IXC. Os tokens ficam só no servidor, nunca no navegador.
-- No Zabbix ela só lê e reconhece alarme; no IXC só lista, e só as tabelas que o painel usa.
-- Os logins do IXC viram clientes on-line, sem internet ou bloqueados por atraso, e as quedas são agrupadas por CTO ou por OLT.
-- A topologia vem do NetBox e os vizinhos LLDP, do LibreNMS.
-
-</details>
+Quando a ferramenta certa não existe, eu escrevo. Três delas estão abertas aqui embaixo.
 
 ## Central de Comunicados
 
@@ -46,18 +26,23 @@ no Instagram do provedor, na hora ou agendado. Quando a rede volta, um botão mo
 
 </details>
 
+## Monitoramento de Redes
+
+<a href="https://github.com/cristianprevot05-web/Monitoramento-de-Redes"><img width="100%" src="assets/monitoramento-de-redes.png" alt="Dois painéis no Grafana: à esquerda, três eventos de OLT abertos, todos de PON perto do limite de ONUs; à direita, a fila de reparo de CTO vinda do IXC, sem OS no momento." /></a>
+
+Dois painéis no Grafana. O da esquerda junta os eventos das OLTs que chegam do Zabbix e separa o que ainda
+não foi reconhecido. O da direita puxa do IXC as ordens de serviço de reparo de CTO e avisa quando a mesma caixa ganha uma OS duplicada.
+
+[Ler o código](https://github.com/cristianprevot05-web/Monitoramento-de-Redes)
+
 ## Sofia, agente de IA do suporte
+
+<a href="https://github.com/cristianprevot05-web/agente-de-ia"><img width="100%" src="assets/sofia.png" alt="Tela da Sofia, o Agente FlexNet, com a mensagem de boas-vindas e o campo para a consulta técnica." /></a>
 
 Faz a triagem das ordens de serviço do IXC e acha a resposta nos manuais da empresa. Roda local no LM Studio
 com temperatura 0, e as senhas de equipamento vêm de uma tabela fixa, para o modelo nunca inventar uma.
 
 [Ler o código](https://github.com/cristianprevot05-web/agente-de-ia)
-
-## Monitoramento de OLTs
-
-Painel no Grafana com os dados do Zabbix para as OLTs do provedor, mais um alerta de OS duplicada de reparo de CTO vinda do IXC.
-
-[Ler o código](https://github.com/cristianprevot05-web/Monitoramento-de-Redes)
 
 ## Ferramentas
 
