@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="110" viewBox="0 0 1000 110" role="img" aria-label="Obrigado pela visita.">
+<style>
+  .sans{font-family:'Segoe UI', Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif} .mono{font-family:'JetBrains Mono', 'Cascadia Code', Consolas, 'SF Mono', Menlo, monospace}
+  .in{animation:rise .9s cubic-bezier(.16,1,.3,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .blink{animation:blink 1.1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  .led{animation:led 2.4s ease-in-out infinite}
+  @keyframes led{0%,100%{opacity:1}50%{opacity:.25}}
+  .pulse{animation:pulse 4.5s cubic-bezier(.215,.61,.355,1) infinite}
+  @keyframes pulse{from{stroke-dashoffset:.16}to{stroke-dashoffset:-1}}
+  @media (prefers-reduced-motion:reduce){.in,.blink,.led,.pulse,.ch{animation:none}.moving{display:none}}</style>
+<path d="M60 40H940" stroke="#1b3354" stroke-dasharray="2 5"/>
+<path d="M60 40H940" pathLength="1" stroke="#3ee0a1" stroke-width="2.4" stroke-linecap="round" stroke-dasharray=".12 1" class="pulse"/>
+<path d="M940 40H60" pathLength="1" stroke="#ffb547" stroke-width="2.4" stroke-linecap="round" stroke-dasharray=".08 1" class="pulse" style="animation-delay:2.2s;animation-duration:6s"/>
+<circle cx="60" cy="40" r="6" fill="#0a1628" stroke="#3ee0a1"/><circle cx="940" cy="40" r="6" fill="#0a1628" stroke="#ffb547"/>
+<text x="500" y="88" class="mono" font-size="14" fill="#8ea3c0" text-anchor="middle">obrigado pela visita · conexão encerrada sem perda de pacotes</text>
+</svg>
